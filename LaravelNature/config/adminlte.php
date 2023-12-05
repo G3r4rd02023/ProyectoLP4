@@ -328,66 +328,69 @@ return [
             'text' => 'change_password',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
+        ],      
+        
+        [
+            'text'    => 'Sucursales',
+            'icon'    => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+                    'text' => 'Sucursales',
+                    'url'  => '/sucursal',
+                ],
+                [
+                    'text' => 'Telefonos',
+                    'url'  => '/telefono',
+                ],
+                [
+                    'text' => 'Direcciones',
+                    'url'  => '/direccion',
+                ],
+
+            ]
         ],
         [
             'text'    => 'Personas',
-            'url'     => '/personas',
-            'icon'    => 'fas fa-fw fa-share',   
-        ],
-        [
-            'text'    => 'Usuarios',
-            'url'     => '/usuarios',
-            'icon'    => 'fas fa-fw fa-share',   
-        ],
-        [
-            'text'    => 'Telefonos',
-            'url'     => '/telefonos',
-            'icon'    => 'fas fa-fw fa-share',   
-        ],
-        [
-            'text'    => 'Correos',
-            'url'     => '/correos',
-            'icon'    => 'fas fa-fw fa-share',   
-        ],
-        [
-            'text'    => 'Proveedores',
-            'url'     => '/proveedores',
-            'icon'    => 'fas fa-fw fa-share',   
-        ],
-        [
-            'text'    => 'Acreedores',
-            'url'     => '/acreedores',
-            'icon'    => 'fas fa-fw fa-share',   
-        ],
-        [
-            'text'    => 'Clientes',
-            'url'     => '/clientes',
-            'icon'    => 'fas fa-fw fa-share',   
-        ],
-        [
-            'text'    => 'Direcciones',
-            'url'     => '/direcciones',
-            'icon'    => 'fas fa-fw fa-share',   
-        ],
-        [
-            'text'    => 'Empleados',
-            'url'     => '/empleados',
-            'icon'    => 'fas fa-fw fa-share',   
-        ],
-        [
-            'text'    => 'Sucursales',
-            'url'     => '/sucursal',
-            'icon'    => 'fas fa-fw fa-share',   
-        ],
-        [
-            'text'    => 'Telefonos Sucursales',
-            'url'     => '/telefono',
-            'icon'    => 'fas fa-fw fa-share',   
-        ],
-        [
-            'text'    => 'Direcciones Sucursales',
-            'url'     => '/direccion',
-            'icon'    => 'fas fa-fw fa-share',   
+            'icon'    => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+                    'text' => 'Personas',
+                    'url'  => '/personas',
+                ],
+                [
+                    'text' => 'Usuarios',
+                    'url'  => '/usuarios',
+                ],
+                [
+                    'text' => 'Telefonos',
+                    'url'  => '/telefonos',
+                ],
+                [
+                    'text' => 'Correos',
+                    'url'  => '/correos',
+                ],
+                [
+                    'text' => 'Proveedores',
+                    'url'  => '/proveedores',
+                ],
+                [
+                    'text' => 'Clientes',
+                    'url'  => '/clientes',
+                ],
+                [
+                    'text' => 'Acreedores',
+                    'url'  => '/acreedores',
+                ],
+                [
+                    'text' => 'Empleados',
+                    'url'  => '/empleados',
+                ],
+                [
+                    'text' => 'Direcciones',
+                    'url'  => '/direcciones',
+                ],
+
+            ]
         ],
         [
             'text'    => 'Producto',
