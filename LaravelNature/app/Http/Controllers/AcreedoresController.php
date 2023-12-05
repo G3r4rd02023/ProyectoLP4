@@ -51,7 +51,7 @@ class AcreedoresController extends Controller
         $response = Http::get('http://localhost:3000/acreedores/'.$cod_cliente);
         $personaData = json_decode($response->body(), true);
 
-        return view('acreedores.detalles')->with('personaData', $personaData);
+        return view('acreedores.detalle')->with('personaData', $personaData);
     }
 
     /**

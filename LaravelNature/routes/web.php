@@ -5,7 +5,7 @@ use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\UnidadController;
 use App\Http\Controllers\VentaController;
 use App\Http\Controllers\VendedorController;
-use App\Http\Controllers\TelefonoController;
+use App\Http\Controllers\TelefonoVentasController;
 use App\Http\Controllers\MetodoPagoController;
 use App\Http\Controllers\DetalleVentaController;
 use App\Http\Controllers\ClienteController;
@@ -19,6 +19,9 @@ use App\Http\Controllers\ClientesController;
 use App\Http\Controllers\AcreedoresController;
 use App\Http\Controllers\DireccionesController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SucursalController;
+use App\Http\Controllers\TelefonoController;
+use App\Http\Controllers\DireccionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -179,7 +182,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/telefono/{cod_telefono}/edit', [TelefonoController::class, 'edit'])->name('telefono.edit');
     Route::put('/telefono/{cod_telefono}', [TelefonoController::class, 'update'])->name('telefono.update');
     Route::delete('/telefono/{cod_telefono}', [TelefonoController::class, 'destroy'])->name('telefono.destroy');
-        
+    
 });
 
 Route::middleware('auth')->group(function () {
@@ -295,23 +298,23 @@ Route::delete('/EliminarVendedor/{cod_vendedor}', [VendedorController::class, 'e
 
 // RUTAS TELEFONO
 // Ruta para seleccionar telefonos
-Route::get('/telefonos', [TelefonoController::class, 'index'])->name('telefono.index');
+Route::get('/telefonoVenta', [TelefonoVentasController::class, 'index'])->name('telefono.index');
 
 // Formulario para crear telefonos
-Route::get('/crearFormTel', [TelefonoController::class, 'CreateTelefono']);
+Route::get('/crearFormTel', [TelefonoVentasController::class, 'CreateTelefono']);
 
 // Insertar Telefono
-Route::post('/guardar-Telefono', [TelefonoController::class, 'guardarTelefono'])->name('guardar.telefono');
+Route::post('/guardar-Telefono', [TelefonoVentasController::class, 'guardarTelefono'])->name('guardar.telefono');
 
 // Actualizar Telefono
 // Mostrar formulario de actualización
-Route::get('/UpdateFormTel/{cod_telefono}', [TelefonoController::class, 'UpdateForm'])->name('telefono.update.form');
+Route::get('/UpdateFormTel/{cod_telefono}', [TelefonoVentasController::class, 'UpdateForm'])->name('telefono.update.form');
 
 // Procesar la actualización del telefono
-Route::put('/telefono/{cod_telefono}', [TelefonoController::class, 'updateTelefono'])->name('telefono.update');
+Route::put('/telefono/{cod_telefono}', [TelefonoVentasController::class, 'updateTelefono'])->name('telefono.update');
 
 // Procesar Eliminar Telefono
-Route::delete('/EliminarTelefono/{cod_telefono}', [TelefonoController::class, 'eliminarTelefono'])->name('eliminar.telefono');
+Route::delete('/EliminarTelefono/{cod_telefono}', [TelefonoVentasController::class, 'eliminarTelefono'])->name('eliminar.telefono');
 
 
 // RUTAS METODO DE PAGO
@@ -359,7 +362,7 @@ Route::delete('/EliminarDetalleVenta/{cod_det_venta}', [DetalleVentaController::
 
 // RUTAS CLIENTE
 // Ruta para seleccionar clientes
-Route::get('/clientes', [ClienteController::class, 'index'])->name('cliente.index');
+Route::get('/cliente', [ClienteController::class, 'index'])->name('cliente.index');
 
 // Formulario para crear clientes
 Route::get('/crearFormCli', [ClienteController::class, 'CreateCliente']);

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Request;
 
-class TelefonoController extends Controller
+class TelefonoVentasController extends Controller
 {
     // Define la URL base de la API como una propiedad de instancia
     private $serverapi = 'http://localhost:3000';

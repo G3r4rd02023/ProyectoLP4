@@ -51,7 +51,7 @@ class ClientesController extends Controller
         $response = Http::get('http://localhost:3000/clientes/'.$cod_cliente);
         $personaData = json_decode($response->body(), true);
 
-        return view('clientes.detalles')->with('personaData', $personaData);
+        return view('clientes.detalle')->with('personaData', $personaData);
     }
 
     /**

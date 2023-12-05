@@ -52,7 +52,7 @@ class CorreosController extends Controller
         $response = Http::get('http://localhost:3000/correos/'.$cod_correo);
         $personaData = json_decode($response->body(), true);
 
-        return view('correos.detalles')->with('personaData', $personaData);
+        return view('correos.detalle')->with('personaData', $personaData);
     }
 
     /**

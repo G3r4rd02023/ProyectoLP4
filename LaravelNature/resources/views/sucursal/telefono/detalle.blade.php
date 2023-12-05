@@ -34,7 +34,7 @@
                             <input type="text" value="{{ $sucursalData[0]['FEC_AGR_TELEFONO'] }}" class="form-control" readonly>
                         </div>   
                        
-                        <a href="{{ url('/telefono') }}" class="btn btn-success">Volver</a>
+                        <a href="{{ url('/telefono') }}" class="btn btn-success">Cancelar</a>
                     </div>
                 </div>
             </div>

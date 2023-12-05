@@ -13,7 +13,7 @@ class TelefonoController extends Controller
     {
         $serverapi = 'http://localhost:3000/';
         $response = Http::get($serverapi.'telefono/');
-        return view('telefono.telefono')->with('ResulSucursal', json_decode($response,true)); 
+        return view('sucursal/telefono.telefono')->with('ResulSucursal', json_decode($response,true)); 
     }
 
     /**
@@ -21,7 +21,7 @@ class TelefonoController extends Controller
      */
     public function create()
     {
-        return view('telefono.create');
+        return view('sucursal/telefono.create');
     }
 
     /**
@@ -50,7 +50,7 @@ class TelefonoController extends Controller
         $response = Http::get("http://localhost:3000/sucursal/telefono/{$cod_telefono}");
         $sucursalData = json_decode($response->body(), true);
 
-        return view('telefono.detalle')->with('sucursalData', $sucursalData);
+        return view('sucursal/telefono.detalle')->with('sucursalData', $sucursalData);
     }
 
     /**
@@ -60,7 +60,7 @@ class TelefonoController extends Controller
     {
         $sucursal = Http::get("http://localhost:3000/sucursal/telefono/{$cod_telefono}")->json();
         
-        return view('telefono.edit', compact('sucursal'));
+        return view('sucursal/telefono.edit', compact('sucursal'));
     }
 
     /**

@@ -42,6 +42,7 @@
                     <td> 
                         <div class="d-inline">
                             <a href="{{ route('telefono.edit', $sucursal['COD_TELEFONO']) }}" class="btn-sm btn-warning mr-1"><i class="fas fa-pencil-alt"></i></a>
+                           
                         </div>
                         <div class="d-inline">
                             <a href="{{ route('telefono.show', $sucursal['COD_TELEFONO']) }}" class="btn-sm btn-info mr-1"><i class="fas fa-list-alt"></i></a>

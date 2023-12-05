@@ -13,7 +13,7 @@ class DireccionController extends Controller
     {
         $serverapi = 'http://localhost:3000/';
         $response = Http::get($serverapi.'direccion/');
-        return view('direccion.direccion')->with('ResulSucursal', json_decode($response,true)); 
+        return view('sucursal/direccion.direccion')->with('ResulSucursal', json_decode($response,true)); 
     }
 
     /**
@@ -21,7 +21,7 @@ class DireccionController extends Controller
      */
     public function create()
     {
-        return view('direccion.create');
+        return view('sucursal/direccion.create');
     }
 
     /**
@@ -51,7 +51,7 @@ class DireccionController extends Controller
         $response = Http::get("http://localhost:3000/sucursal/direccion/{$cod_direccion}");
         $sucursalData = json_decode($response->body(), true);
 
-        return view('direccion.detalle')->with('sucursalData', $sucursalData);
+        return view('sucursal/direccion.detalle')->with('sucursalData', $sucursalData);
     }
 
     /**
@@ -61,7 +61,7 @@ class DireccionController extends Controller
     {
         $sucursal = Http::get("http://localhost:3000/sucursal/direccion/{$id}")->json();
         
-        return view('direccion.edit', compact('sucursal'));
+        return view('sucursal/direccion.edit', compact('sucursal'));
     }
 
     /**

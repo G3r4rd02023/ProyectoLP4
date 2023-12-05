@@ -51,7 +51,7 @@ class ProveedoresController extends Controller
         $response = Http::get('http://localhost:3000/proveedores/'.$cod_proveedor);
         $personaData = json_decode($response->body(), true);
 
-        return view('proveedores.detalles')->with('personaData', $personaData);
+        return view('proveedores.detalle')->with('personaData', $personaData);
     }
 
     /**

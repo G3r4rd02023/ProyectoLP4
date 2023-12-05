@@ -56,7 +56,7 @@ class DireccionesController extends Controller
         $response = Http::get('http://localhost:3000/direcciones/'.$cod_direccion);
         $personaData = json_decode($response->body(), true);
 
-        return view('direcciones.detalles')->with('personaData', $personaData);
+        return view('direcciones.detalle')->with('personaData', $personaData);
     }
 
     /**
