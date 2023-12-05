@@ -22,6 +22,9 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SucursalController;
 use App\Http\Controllers\TelefonoController;
 use App\Http\Controllers\DireccionController;
+use App\Http\Controllers\CitaController;
+use App\Http\Controllers\PagoController;
+use App\Http\Controllers\ServicioController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -379,5 +382,57 @@ Route::put('/cliente/{cod_cliente}', [ClienteController::class, 'updateCliente']
 
 // Procesar Eliminar Cliente
 Route::delete('/EliminarCliente/{cod_cliente}', [ClienteController::class, 'eliminarCliente'])->name('eliminar.cliente');
+
+//Citas
+//ruta de selecciona citas
+Route::get('/ci_cita', [CitaController::class, 'index'])->name('citas.index');
+// llamdo de cita con parametro
+Route::get('/DetalleCitas/{cod_cita}', [CitaController::class, 'ShowCita']);
+//Formulario para crear cita
+Route::get('/crearForm', [CitaController::class, 'createcita']);
+//Insertar Citas
+Route::post('/citasins', [CitaController::class, 'guardarCita'])->name('guardar.cita');
+//Actualizar cita
+// Mostrar formulario de actualización
+Route::get('/UpdateForm/{cod_cita}', [CitaController::class, 'UpdateForm'])->name('cita.update.form');
+// Procesar la actualización de la cita
+Route::put('/cita/{cod_cita}', [CitaController::class, 'updateCita'])->name('cita.update');
+// Procesar Eliminar cita
+Route::delete('/EliminarCita/{cod_cita}', [CitaController::class, 'eliminarCita'])->name('eliminar.cita'); 
+
+//Pagos
+//ruta de selecciona pagos
+Route::get('/ci_pago', [PagoController::class, 'index'])->name('pagos.index');
+// llamdo de pago con parametro
+Route::get('/DetallePagos/{cod_pago}', [PagoController::class, 'ShowPago']);
+//Formulario para crear pago
+Route::get('/crearFormPa', [PagoController::class, 'createpago']);
+//Insertar Pagos
+Route::post('/pagosins', [PagoController::class, 'guardarPago'])->name('guardar.pago');
+//Actualizar pago
+// Mostrar formulario de actualización
+Route::get('/UpdateFormPa/{cod_pago}', [PagoController::class, 'UpdateFormPa'])->name('pago.update.form');
+// Procesar la actualización del pago
+Route::put('/pago/{cod_pago}', [PagoController::class, 'updatePago'])->name('pago.update');
+// Procesar Eliminar pago
+Route::delete('/EliminarPago/{cod_pago}', [PagoController::class, 'eliminarPago'])->name('eliminar.pago'); 
+
+//Servicio
+//ruta de selecciona servicio
+Route::get('/ci_servicio', [ServicioController::class, 'index'])->name('servicios.index');
+// llamdo de servicio con parametro
+Route::get('/DetalleServicios/{cod_servicio}', [ServicioController::class, 'ShowServicio']);
+//Formulario para crear servicio
+Route::get('/crearFormSe', [ServicioController::class, 'createservicio']);
+//Insertar Servicio
+Route::post('/serviciosins', [ServicioController::class, 'guardarServicio'])->name('guardar.servicio');
+//Actualizar servicio
+// Mostrar formulario de actualización
+Route::get('/UpdateFormSe/{cod_servicio}', [ServicioController::class, 'UpdateFormSe'])->name('servicio.update.form');
+// Procesar la actualización del servicio
+Route::put('/servicio/{cod_servicio}', [ServicioController::class, 'updateServicio'])->name('servicio.update');
+// Procesar Eliminar servicio
+Route::delete('/EliminarServicio/{cod_servicio}', [ServicioController::class, 'eliminarServicio'])->name('eliminar.servicio'); 
+
 
 require __DIR__.'/auth.php';

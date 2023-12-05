@@ -451,6 +451,36 @@ return [
             ],
         ],
         [
+            'text'    => 'Cita',
+            'icon'    => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+                    'text' => 'Citas',
+                    'url'  => '/ci_cita',
+                ],    
+            ],
+        ],
+        [
+            'text'    => 'Pago',
+            'icon'    => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+                    'text' => 'Pagos',
+                    'url'  => '/ci_pago',
+                ],
+            ],
+        ],
+        [
+            'text'    => 'Servicio',
+            'icon'    => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+                    'text' => 'Servicios',
+                    'url'  => '/ci_servicio',
+                ],
+            ],
+        ],
+        [
             'text'    => 'multilevel',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
