@@ -481,6 +481,23 @@ return [
             ],
         ],
         [
+            'text'    => 'PUBLICIDAD',
+            'icon'    => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+                    'text' => 'Publicidad',
+                    'url'  => '/publicidad',
+                ],
+                [
+                    'text'    => 'Promocion',
+                    'url'     => '/promocion',
+                    
+                ],
+  
+  
+            ],
+        ],
+        [
             'text'    => 'multilevel',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
