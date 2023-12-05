@@ -375,6 +375,21 @@ return [
             'icon'    => 'fas fa-fw fa-share',   
         ],
         [
+            'text'    => 'Sucursales',
+            'url'     => '/sucursal',
+            'icon'    => 'fas fa-fw fa-share',   
+        ],
+        [
+            'text'    => 'Telefonos Sucursales',
+            'url'     => '/telefono',
+            'icon'    => 'fas fa-fw fa-share',   
+        ],
+        [
+            'text'    => 'Direcciones Sucursales',
+            'url'     => '/direccion',
+            'icon'    => 'fas fa-fw fa-share',   
+        ],
+        [
             'text'    => 'multilevel',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
