@@ -390,6 +390,67 @@ return [
             'icon'    => 'fas fa-fw fa-share',   
         ],
         [
+            'text'    => 'Producto',
+            'icon'    => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+                    'text' => 'Producto',
+                    'url'  => '/productos',
+                ],
+                [
+                    'text'    => 'Marca',
+                    'url'     => '/marcas',
+                    
+                ],
+                [
+                    'text' => 'Categoria',
+                    'url'  => '/categorias',
+                ],
+                [
+                    'text' => 'Unidad',
+                    'url'  => '/unidades',
+                ],
+                
+            
+            ],
+        ],
+        [
+            'text'    => 'Venta',
+            'icon'    => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+                    'text' => 'Venta',
+                    'url'  => '/ventas',
+                ],
+                
+                
+                [
+                    'text' => 'Cliente',
+                    'url'  => '/clientes',
+                ],
+                [
+                    'text' => 'Telefono',
+                    'url'  => '/telefonos',
+                ],
+                
+                
+                [
+                    'text' => 'Vendedor',
+                    'url'  => '/vendedor',
+                ],
+                [
+                    'text' => 'Metodo de Pago',
+                    'url'  => '/metodoPagos',
+                ],
+                
+                
+                [
+                    'text' => 'Detalle de venta',
+                    'url'  => '/detalleVentas',
+                ],
+            ],
+        ],
+        [
             'text'    => 'multilevel',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
